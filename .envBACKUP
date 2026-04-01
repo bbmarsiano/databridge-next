@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────
+# DataBridge — Environment Variables
+# Copy this file to .env.local and fill in the values.
+# NEVER commit .env.local to Git.
+# ─────────────────────────────────────────────────────────
+
+# Email sending via Resend (https://resend.com — free tier: 3,000 emails/mo)
+# Get your key at: https://resend.com/api-keys
+RESEND_API_KEY=re_HeAkAAML_AAkgk6r7gPB859RXJQtRxuuv
+
+# The email address that receives contact form submissions
+CONTACT_RECIPIENT_EMAIL=contact@dmg-web.net
+
+# The "From" address for outgoing emails (must be verified in Resend)
+CONTACT_FROM_EMAIL=noreply@dmg-web.net
+
+# Supabase (https://supabase.com — free tier available)
+# Get these from: Project Settings → API
+NEXT_PUBLIC_SUPABASE_URL=https://xghihexeklxlahpfwkxd.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnaGloZXhla2x4bGFocGZ3a3hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5MDU3MzcsImV4cCI6MjA4OTQ4MTczN30.hiwc5ZotYCjgfa9RXbjwhst0D1xaIAga0wQxuLJ7NtI
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhnaGloZXhla2x4bGFocGZ3a3hkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MzkwNTczNywiZXhwIjoyMDg5NDgxNzM3fQ.YDf0dV8bTd7UhyJp00TXIKLWt227Ld3ZpiBJuzAo4dU
+
+# Site URL (used for sitemap, OG tags, etc.)
+NEXT_PUBLIC_SITE_URL=https://dmg-web.net
+
+# Google Analytics (optional — paste your GA4 Measurement ID)
+# NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
