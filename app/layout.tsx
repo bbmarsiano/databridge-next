@@ -62,8 +62,20 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ['/og-image.jpg'],
   },
-  robots: { index: true, follow: true },
-  alternates: { canonical: siteConfig.url },
+  robots: {
+    index:  true,
+    follow: true,
+    googleBot: {
+      index:             true,
+      follow:            true,
+      'max-video-preview':  -1,
+      'max-image-preview':  'large',
+      'max-snippet':        -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://dmg-web.net',
+  },
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
