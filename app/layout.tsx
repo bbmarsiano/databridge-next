@@ -72,8 +72,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const isUnderConstruction = pathname === '/under-construction'
 
   return (
-    <html lang="en" suppressHydrationWarning className={`${dmSerif.variable} ${outfit.variable}`}>
-      <head suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true} className={`${dmSerif.variable} ${outfit.variable}`}>
+      <head suppressHydrationWarning={true}>
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
             <script
@@ -99,32 +99,32 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </>
         )}
         <script
+          key="org-jsonld"
           type="application/ld+json"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'DMG Web LTD',
+              '@type':    'Organization',
+              name:       'DMG Web LTD',
               alternateName: 'dmgweb',
-              url: 'https://dmg-web.net',
-              logo: 'https://dmg-web.net/logos/icon-512.png',
+              url:        'https://dmg-web.net',
+              logo:       'https://dmg-web.net/logos/icon-512.png',
               contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+359-2-XXX-XXXX',
-                contactType: 'customer service',
-                areaServed: ['BG', 'EU'],
+                '@type':           'ContactPoint',
+                telephone:         '+359-892-738-290',
+                contactType:       'customer service',
+                areaServed:        ['BG', 'EU'],
                 availableLanguage: ['English', 'Bulgarian'],
               },
               address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'ul. Dobar unak 2',
+                '@type':         'PostalAddress',
+                streetAddress:   'ul. Dobar unak 2',
                 addressLocality: 'Sofia',
-                postalCode: '1421',
-                addressCountry: 'BG',
+                postalCode:      '1421',
+                addressCountry:  'BG',
               },
-              sameAs: [
-                'https://www.bait.bg/',
-              ],
+              sameAs: ['https://www.bait.bg/'],
             }),
           }}
         />
